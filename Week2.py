@@ -1,6 +1,5 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+
 
 infected_df = pd.read_csv(r"C:\Users\bett0\Desktop\miuul\Ada_Lovelace_Homework\time_series_covid19_confirmed_global.csv")
 
