@@ -3,7 +3,7 @@ import requests
 class TheMovieDb:
     def __init__(self):
         self.api_url = "https://api.themoviedb.org/3"
-        self.api_key = "59db5c5aacf37804776abf844a7b3112"
+        self.api_key = ""
 
     def getPopulars(self):
         response = requests.get(
