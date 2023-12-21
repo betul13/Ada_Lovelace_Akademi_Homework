@@ -9,7 +9,7 @@ recovered_df = pd.read_csv(r"C:\Users\bett0\Desktop\miuul\Ada_Lovelace_Homework\
 deaths_df = pd.read_csv(r"C:\Users\bett0\Desktop\miuul\Ada_Lovelace_Homework\time_series_covid19_deaths_global.csv")
 
 pd.set_option("display.max_columns", None)
-pd.set_option("display.width", 500)
+pd.set_option("display.width" ,500)
 def check_df(dataframe, head = 5):
     print("######################################  Shape  ##################################")
     print(dataframe.shape)
@@ -51,3 +51,13 @@ def target_summary_with_cat(dataframe, target, categorical_col):
 target_summary_with_cat(infected_df, "province_total_infected", "Province/State")
 
 
+def make_frame(country : str):
+    df = pd.DataFrame({
+        "infected" : infected_df.loc[country],
+        "rcovered": recovered_df.loc[country],
+        "deaths": deaths_df_df.loc[country],
+
+    })
+    df.index = pd.to_datetime()
+
+    make_frame("US")
